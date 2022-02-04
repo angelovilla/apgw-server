@@ -1,0 +1,13 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: apgw-server
+  cloud:
+    gateway:
+      routes:
+      - id: examfinal
+        uri: http://localhost:62382
+        predicates:
+        - Path=/cliente/**
